@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة التوسع ودخول السوق المصري | نتقهوي — Netgahwa</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo, IBM Plex Sans Arabic & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Pro Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            blue: '#0A4C86',
+                            blueLight: '#1C75C8',
+                            blueDeep: '#05233E',
+                            blueDarkest: '#031424',
+                            green: '#00875A',
+                            greenLight: '#00B377',
+                            gold: '#D4AF37',
+                            goldLight: '#F5DE88',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            dark: '#020611',
+                            darkCard: '#071324',
+                            cardBg: '#091A30',
+                            border: '#152C48',
+                            borderLight: '#1E4068'
+                        },
+                        client: {
+                            brand: '#0A4C86',
+                            accent: '#06B6D4',
+                            highlight: '#00B377',
+                            gold: '#D4AF37'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif'],
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'executive-glow': '0 0 50px -10px rgba(6, 182, 212, 0.35)',
+                        'green-glow': '0 0 40px -10px rgba(0, 179, 119, 0.35)',
+                        'gold-glow': '0 0 40px -10px rgba(212, 175, 55, 0.3)',
+                        'executive-card': '0 20px 45px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #020611;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #executive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .kaaf-accent-ribbon {
+            background: linear-gradient(90deg, #0A4C86 0%, #06B6D4 30%, #00B377 65%, #D4AF37 100%);
+            height: 3px;
+        }
+
+        .glass-panel {
+            background: rgba(7, 19, 36, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(25, 48, 77, 0.85);
+        }
+
+        .executive-card {
+            background: linear-gradient(145deg, rgba(9, 26, 48, 0.9) 0%, rgba(4, 14, 28, 0.96) 100%);
+            border: 1px solid rgba(21, 44, 72, 0.85);
+            backdrop-filter: blur(14px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .executive-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(6, 182, 212, 0.6);
+            box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 28px rgba(6, 182, 212, 0.25);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.25s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #06B6D4;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-item-active::after {
+            width: 100%;
+        }
+        .nav-item-active {
+            color: #67E8F9 !important;
+        }
+
+        @keyframes float-badge {
+            0%, 100% { 
+                transform: translateY(0px); 
+                box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.7), 0 0 18px rgba(6, 182, 212, 0.45); 
+            }
+            50% { 
+                transform: translateY(-6px); 
+                box-shadow: 0 18px 35px -5px rgba(0, 0, 0, 0.85), 0 0 28px rgba(6, 182, 212, 0.7); 
+            }
+        }
+        .animate-float-kaaf {
+            animation: float-badge 4s ease-in-out infinite;
+        }
+
+        @keyframes float-wa {
+            0%, 100% { 
+                transform: translateY(0px) scale(1); 
+                box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.7), 0 0 18px rgba(37, 211, 102, 0.45); 
+            }
+            50% { 
+                transform: translateY(-6px) scale(1.03); 
+                box-shadow: 0 18px 35px -5px rgba(0, 0, 0, 0.85), 0 0 28px rgba(37, 211, 102, 0.7); 
+            }
+        }
+        .animate-float-wa {
+            animation: float-wa 4s ease-in-out infinite 0.7s;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-blue selection:text-white">
+
+    <!-- Interactive Background Particle Canvas -->
+    <canvas id="executive-bg-canvas"></canvas>
+
+    <!-- Reading Progress Bar -->
+    <div class="fixed top-0 left-0 right-0 h-1 bg-white/5 z-50">
+        <div id="progressBar" class="kaaf-accent-ribbon h-full w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Sticky Executive Navigation Header -->
+    <header class="sticky top-0 z-40 bg-kaaf-dark/90 backdrop-blur-xl border-b border-kaaf-border px-4 sm:px-8 py-3.5 transition-all" id="headerNav">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Strategic Brand Identity -->
+            <a href="#cover" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-cyan/50 p-1 bg-gradient-to-br from-kaaf-blueDeep to-black shrink-0 shadow-executive-glow transition-transform group-hover:scale-105 flex items-center justify-center">
+                    <i class="fa-solid fa-mug-hot text-kaaf-cyan text-xl"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-black text-white tracking-wide font-ibm">نتقهوي | Netgahwa</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Executive Menu -->
+            <nav class="hidden lg:flex items-center gap-5 text-xs font-bold text-gray-300">
+                <a href="#cover" class="nav-link py-1 hover:text-white">المقترح</a>
+                <a href="#market-strategy" class="nav-link py-1 hover:text-white">دراسة السوق وB2B/B2C</a>
+                <a href="#integrated-system" class="nav-link py-1 hover:text-white">منظومة النمو المتكاملة</a>
+                <a href="#digital-core" class="nav-link py-1 hover:text-white">الموقع وSEO & GEO</a>
+                <a href="#media-growth" class="nav-link py-1 hover:text-white">Media Buying & Social</a>
+                <a href="#outdoor-sales" class="nav-link py-1 hover:text-white">المبيعات الميدانية (Outdoor)</a>
+                <a href="#roadmap" class="nav-link py-1 hover:text-white">خطة الـ 3 أشهر</a>
+                <a href="#investment" class="px-4 py-1.5 rounded-full bg-gradient-to-r from-kaaf-blue via-kaaf-cyan to-kaaf-green text-white font-black hover:brightness-110 shadow-lg shadow-kaaf-blue/30 transition">الاستثمار المالي</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <button id="mobileMenuBtn" aria-label="القائمة" class="lg:hidden text-gray-300 hover:text-white p-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+                    <i class="fa-solid fa-bars text-base" id="mobileIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-2 px-2 border-t border-kaaf-border/60 mt-3 space-y-1 text-xs font-semibold">
+            <a href="#cover" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">الغلاف التنفيذي</a>
+            <a href="#market-strategy" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">دراسة السوق واستراتيجية B2B وB2C</a>
+            <a href="#integrated-system" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-kaaf-cyanLight font-bold">منظومة النمو المتكاملة</a>
+            <a href="#digital-core" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">الموقع الإلكتروني وSEO & GEO</a>
+            <a href="#media-growth" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">السوشيال ميديا وMedia Buying</a>
+            <a href="#outdoor-sales" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">المبيعات الميدانية وصناع المحتوى (UGC)</a>
+            <a href="#roadmap" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">خارطة طريق الـ 3 أشهر (3-Month Roadmap)</a>
+            <a href="#investment" class="mobile-nav block py-2.5 px-3 rounded-lg bg-kaaf-blue/40 text-kaaf-cyanLight font-bold">الاستثمار المالي المعتمد</a>
+            <a href="#closing" class="mobile-nav block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300">الرؤية الختامية والتنفيذ</a>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+
+        <!-- ========================================================================= -->
+        <!-- 01 — COVER — EXECUTIVE TITLE & DEDICATION                                 -->
+        <!-- ========================================================================= -->
+        <section id="cover" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-20 glass-panel border border-kaaf-cyan/40 shadow-executive-glow">
+            <div class="kaaf-accent-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-8 space-y-7">
+                    <!-- Executive Recipient Tag -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-kaaf-blue/30 border border-kaaf-blueLight/40 text-kaaf-cyanLight text-xs font-bold font-ibm">
+                        <i class="fa-solid fa-sparkles text-kaaf-cyan"></i>
+                        <span>خطة التوسع ودخول السوق المصري • Egypt Market Entry & Scaling Strategy</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-normal sm:leading-relaxed">
+                            خطة النمو والتوسع التجاري
+                            <span class="block mt-3 sm:mt-5 text-transparent bg-clip-text bg-gradient-to-l from-kaaf-cyanLight via-kaaf-blueLight to-kaaf-greenLight pb-2">
+                                لبراند «نتقهوي»
+                            </span>
+                        </h1>
+                        <p class="text-base sm:text-xl font-bold text-gray-300 font-ibm tracking-wide pt-3 sm:pt-4">
+                            B2B & B2C • Web • SEO & GEO • Social • Media Buying • Outdoor Sales
+                        </p>
+                    </div>
+
+                    <!-- Direct Recipient Dedication Card -->
+                    <div class="p-5 sm:p-6 rounded-2xl bg-black/45 border-r-4 border-kaaf-cyan border-y border-l border-white/5 space-y-2.5">
+                        <div class="flex items-center gap-2 text-xs font-bold text-kaaf-goldLight font-ibm">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                            <span>عرض استراتيجي مخصص لإدارة علامة:</span>
+                        </div>
+                        <div class="text-lg sm:text-xl font-black text-white font-ibm">
+                            نتقهوي (Netgahwa)
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                            ترتكز هذه الخطة على تأسيس حضور استراتيجي قوي وتنافسي لبراند <strong>«نتقهوي»</strong> داخل السوق المصري، من خلال منظومة نمو متكاملة تستهدف الاستحواذ على حصة سوقية واعدة عبر مسارين متوازيين: قطاع الأفراد ومحبي القهوة المختصة (B2C)، وقطاع المقاهي والمطاعم والشركات (B2B)، بالجمع بين القوة الرقمية والمبيعات الميدانية المباشرة.
+                        </p>
+                    </div>
+
+                    <!-- Meta Row -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-white/5 text-center">
+                            <span class="text-[11px] text-gray-400 block font-medium">نطاق التوسع</span>
+                            <span class="text-sm font-bold text-white font-ibm">السوق المصري</span>
+                            <span class="text-xs text-kaaf-cyanLight block mt-0.5">القاهرة الكبرى والمدن الرئيسية</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-white/5 text-center">
+                            <span class="text-[11px] text-gray-400 block font-medium">مدة الخطة الأساسية</span>
+                            <span class="text-sm font-bold text-kaaf-cyanLight font-ibm">3 أشهر استراتيجية</span>
+                            <span class="text-xs text-gray-400 block mt-0.5">إطلاق وتأسيس ونمو وتوسع</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-black/50 border border-white/5 text-center">
+                            <span class="text-[11px] text-gray-400 block font-medium">نموذج الحل</span>
+                            <span class="text-sm font-bold text-kaaf-goldLight font-ibm">منظومة نمو شاملة</span>
+                            <span class="text-xs text-kaaf-greenLight block mt-0.5">تكامل رقمي وميداني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Visual Badge -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full max-w-xs p-7 rounded-3xl executive-card border border-kaaf-cyan/40 space-y-6 text-center shadow-executive-glow">
+                        <div class="space-y-2">
+                            <h2 class="text-base font-bold text-white font-ibm">Market Entry & Dominance</h2>
+                            <p class="text-xs text-gray-300 leading-relaxed font-normal">
+                                استثمار الشغف المتصاعد بالقهوة في مصر لبناء علامة تجارية راسخة ومورد معتمد للقطاع التجاري، عبر مزيج دقيق من المحتوى، الحملات الممولة، تصدر محركات البحث التوليدية، وفريق مبيعات ميداني نشط.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-white/10 text-xs text-kaaf-greenLight font-bold flex items-center justify-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-kaaf-greenLight animate-pulse"></span>
+                            <span>خطة جاهزة للتفعيل والانتشار المباشر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 02 — MARKET ANALYSIS & B2B/B2C STRATEGY                                   -->
+        <!-- ========================================================================= -->
+        <section id="market-strategy" class="space-y-8">
+            <div class="text-center max-w-3xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-blue/20 text-kaaf-cyanLight text-xs font-bold border border-kaaf-blue/40 font-ibm">دراسة السوق والمنافسين • استراتيجية التموضع</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">
+                    تحليل السوق المصري وتحديد مسارات B2B و B2C
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-400">
+                    رؤية تحليلية تستهدف اقتناص الفجوات السوقية لصالح براند «نتقهوي»
+                </p>
+                <p class="text-xs text-gray-300 leading-relaxed pt-1 max-w-2xl mx-auto font-medium">
+                    يشهد سوق القهوة في مصر نموًا متسارعًا مع تحول شريحة واسعة من المستهلكين والمقاهي نحو تجارب القهوة عالية الجودة ومصادر البن الموثوقة؛ مما يتيح لـ <strong>نتقهوي</strong> فرصة ذهبية لترسيخ مكانة رائدة.
+                </p>
+            </div>
+
+            <!-- The Unified Dual-Track Banner -->
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-kaaf-blueDeep via-black to-kaaf-blueDeep border border-kaaf-cyan/50 text-center space-y-3 shadow-executive-glow">
+                <span class="text-[10px] font-mono text-kaaf-cyanLight uppercase tracking-widest block font-bold">THE DUAL-ENGINE GROWTH STRATEGY</span>
+                <div class="text-lg sm:text-2xl font-black text-white font-ibm flex items-center justify-center gap-3 flex-wrap">
+                    <span class="text-kaaf-cyanLight">قطاع B2C (المستهلك النهائي ومحبو القهوة)</span>
+                    <i class="fa-solid fa-handshake text-xs text-kaaf-gold"></i>
+                    <span class="text-kaaf-greenLight">قطاع B2B (المقاهي والمطاعم والشركات)</span>
+                </div>
+                <p class="text-xs text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    مسار B2C يرسخ البراند كخيار أول لعشاق القهوة عبر المتجر الإلكتروني والسوشيال ميديا، بينما مسار B2B يؤمن تدفقات مالية مستقرة وعقود توريد كبرى عبر المبيعات الميدانية المباشرة (Outdoor Sales).
+                </p>
+            </div>
+
+            <!-- Detailed 3 Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Pillar 1: Competitor & Market Analysis -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-cyan flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight bg-kaaf-blue/30 px-2.5 py-1 rounded-full">TRACK A</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-blue/20 text-kaaf-cyan flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-chart-pie text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">تحليل المنافسين والفجوة السوقية</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            رصد دقيق للمنافسين في السوق المصري (المحامص المحلية والعلامات المستوردة) لتحديد نقاط القوة ونقاط القصور لديهم:
+                        </p>
+                        
+                        <div class="p-3 rounded-xl bg-kaaf-blue/25 border border-kaaf-blueLight/40 text-center text-xs font-ibm font-bold text-kaaf-cyanLight">
+                            جودة المنتج + ثبات التوريد + تجربة بصرية عصرية = تفوق نتقهوي
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>فجوة التسليم السريع والخدمة المخصصة للشركات والمقاهي المتوسطة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>قصور المحتوى التعليمي والتفاعلي لدى المنافسين في شرح إيحاءات البن ومصادره.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>ضعف حضور المنافسين في محركات البحث التوليدية (GEO) والذكاء الاصطناعي.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: B2C Consumer Strategy -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-green flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-greenLight bg-kaaf-green/30 px-2.5 py-1 rounded-full">TRACK B</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-green/20 text-kaaf-greenLight flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-users text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">استراتيجية المستهلك النهائي (B2C)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            استقطاب عشاق القهوة المنزلية والمكتبية عبر منصات التواصل الاجتماعي والمتجر الإلكتروني السلس:
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-kaaf-green/20 border border-kaaf-green/40 text-center text-xs font-ibm font-bold text-kaaf-greenLight">
+                            Discovery → Craving → Direct Purchase → Brand Loyalty
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>استهداف المهتمين بأدوات التحضير المنزلي (V60, Espresso, French Press).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>باقات وبوكسات التذوق الشهرية (Coffee Subscriptions) لتحفيز الشراء المتكرر.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>عروض الشحن السريع لكافة محافظات الجمهورية عبر الموقع الإلكتروني.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: B2B Commercial Strategy -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-gold flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-goldLight bg-kaaf-gold/20 px-2.5 py-1 rounded-full">TRACK C</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-gold/20 text-kaaf-gold flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-building text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">استراتيجية قطاع الأعمال (B2B)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            فتح قنوات توريد وتعاقد مستدامة مع المقاهي والمطاعم ومساحات العمل المشتركة والشركات:
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-kaaf-gold/15 border border-kaaf-gold/40 text-center text-xs font-ibm font-bold text-kaaf-goldLight">
+                            Lead Targeting → Field Visit → Sample Tasting → Bulk Supply Contract
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>توريد حبوب البن بالجملة للمقاهي المتخصصة ومطاعم الفئات الراقية.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>حلول ضيافة القهوة للمقرات الإدارية والشركات ومساحات العمل (Coworking Spaces).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>حزم تعاقدية مرنة مع جداول توريد دورية ودعم تدريبي للـ Baristas.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 03 — INTEGRATED GROWTH SYSTEM                                             -->
+        <!-- ========================================================================= -->
+        <section id="integrated-system" class="space-y-8">
+            <div class="text-center max-w-3xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-cyan/20 text-kaaf-cyanLight text-xs font-bold border border-kaaf-cyan/40 font-ibm">تكامل المنظومة التسويقية والبيعية</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">منظومة نمو متكاملة لبراند «نتقهوي»</h2>
+                <p class="text-xs sm:text-sm text-gray-400">محرك أعمال متناغم يغذي فيه كل مسار الآخر لبناء انتشار تجاري شامل</p>
+            </div>
+
+            <!-- Integrated Visual Ecosystem Grid -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-kaaf-blue/50 space-y-8 relative overflow-hidden shadow-2xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 text-center">
+                    <!-- Website -->
+                    <div class="executive-card p-5 rounded-2xl space-y-2 border-t-2 border-kaaf-cyan">
+                        <div class="w-10 h-10 mx-auto rounded-xl bg-kaaf-blue/30 text-kaaf-cyan flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-white font-ibm">Website</h3>
+                        <span class="text-[10px] text-kaaf-cyanLight font-bold block">Digital Flagship</span>
+                        <p class="text-[11px] text-gray-300 leading-relaxed">
+                            منصة تجارة إلكترونية سريعة ومصممة لتحويل الزوار إلى طلبات شراء مباشرة.
+                        </p>
+                    </div>
+
+                    <!-- SEO & GEO -->
+                    <div class="executive-card p-5 rounded-2xl space-y-2 border-t-2 border-kaaf-blueLight">
+                        <div class="w-10 h-10 mx-auto rounded-xl bg-kaaf-blueLight/20 text-kaaf-blueLight flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-microchip-ai"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-white font-ibm">SEO & GEO</h3>
+                        <span class="text-[10px] text-kaaf-cyanLight font-bold block">Search & AI Visibility</span>
+                        <p class="text-[11px] text-gray-300 leading-relaxed">
+                            التصدر في بحث جوجل ومحركات الذكاء الاصطناعي (ChatGPT, Gemini, Perplexity).
+                        </p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="executive-card p-5 rounded-2xl space-y-2 border-t-2 border-kaaf-green">
+                        <div class="w-10 h-10 mx-auto rounded-xl bg-kaaf-green/30 text-kaaf-greenLight flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-white font-ibm">Social Media</h3>
+                        <span class="text-[10px] text-kaaf-greenLight font-bold block">Brand Loyalty & Craving</span>
+                        <p class="text-[11px] text-gray-300 leading-relaxed">
+                            صناعة محتوى إبداعي يرسخ الارتباط الوجداني ويثقف الجمهور بأنواع البن.
+                        </p>
+                    </div>
+
+                    <!-- Media Buying -->
+                    <div class="executive-card p-5 rounded-2xl space-y-2 border-t-2 border-kaaf-gold">
+                        <div class="w-10 h-10 mx-auto rounded-xl bg-kaaf-gold/20 text-kaaf-gold flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-white font-ibm">Media Buying</h3>
+                        <span class="text-[10px] text-kaaf-gold font-bold block">Targeted Conversion</span>
+                        <p class="text-[11px] text-gray-300 leading-relaxed">
+                            حملات إعلانية ممولة تستهدف الشرائح الأعلى إنفاقاً بأعلى عائد على الإنفاق الإعلاني (ROAS).
+                        </p>
+                    </div>
+
+                    <!-- Outdoor Sales -->
+                    <div class="executive-card p-5 rounded-2xl space-y-2 border-t-2 border-purple-400">
+                        <div class="w-10 h-10 mx-auto rounded-xl bg-purple-900/30 text-purple-300 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-white font-ibm">Outdoor Sales</h3>
+                        <span class="text-[10px] text-purple-300 font-bold block">B2B Field Expansion</span>
+                        <p class="text-[11px] text-gray-300 leading-relaxed">
+                            فريق مبيعات ميداني مخصص لإبرام عقود التوريد مع المقاهي والشركات.
+                        </p>
+                    </div>
+
+                    <!-- UGC & Influencers -->
+                    <div class="executive-card p-5 rounded-2xl space-y-2 border-t-2 border-emerald-400">
+                        <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-950/40 text-emerald-300 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-white font-ibm">UGC & Influencers</h3>
+                        <span class="text-[10px] text-emerald-300 font-bold block">Social Proof & Trust</span>
+                        <p class="text-[11px] text-gray-300 leading-relaxed">
+                            تجارب تذوق عفوية ومراجعات موثوقة تصنع انتشارًا اجتماعيًا واسعًا.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strategic Synthesis Output -->
+                <div class="p-6 rounded-2xl bg-gradient-to-r from-kaaf-blueDeep via-black to-kaaf-blueDarkest border border-kaaf-cyan/50 text-center space-y-2">
+                    <span class="text-[10px] font-mono text-kaaf-goldLight uppercase font-bold tracking-wider">THE STRATEGIC OUTCOME</span>
+                    <h3 class="text-base sm:text-xl font-black text-white font-ibm">
+                        بناء حصة سوقية قوية وتدفقات أرباح متوازنة من اليوم الأول
+                    </h3>
+                    <p class="text-xs text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        عندما يتكامل الموقع الإلكتروني الحديث مع التصدر في محركات البحث التقليدية والتوليدية، وتدعمه الإعلانات الممولة ومحتوى التواصل، بالتوازي مع فريق مبيعات ميداني نشط يطرق أبواب المقاهي والشركات، يمتلك براند «نتقهوي» دورة بيعية متكاملة ومستدامة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 04 — DIGITAL CORE: WEBSITE + SEO & GEO                                    -->
+        <!-- ========================================================================= -->
+        <section id="digital-core" class="space-y-8">
+            <div class="text-center max-w-3xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-blue/20 text-kaaf-cyanLight text-xs font-bold border border-kaaf-blue/40 font-ibm">الأصل الرقمي والتصدر في محركات البحث</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">
+                    الموقع الإلكتروني المتطور وتهيئة SEO & GEO
+                </h2>
+                <p class="text-xs sm:text-sm text-kaaf-cyanLight font-ibm">
+                    المدة: 3 أشهر استراتيجية • بناء أصل رقمي متصدر ومهيأ لمحركات الذكاء الاصطناعي
+                </p>
+            </div>
+
+            <!-- Detailed Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Website Building Card -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-cyan flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight bg-kaaf-blue/30 px-2.5 py-1 rounded-full">COMPONENT 01</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-blue/20 text-kaaf-cyan flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-code text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">بناء وتطوير الموقع الإلكتروني (Website Building)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تأسيس الواجهة الرقمية والمتجر الإلكتروني المتكامل لـ <strong>نتقهوي</strong> بتجربة مستخدم عصرية وسريعة مصممة خصيصًا لعشاق القهوة وطلبات الجملة:
+                        </p>
+                        
+                        <div class="p-3 rounded-xl bg-kaaf-blue/25 border border-kaaf-blueLight/40 text-center text-xs font-ibm font-bold text-kaaf-cyanLight">
+                            تصميم متجاوب • مسار شراء سريع • بوابات دفع آمنة • قسم مخصص لطلبات B2B
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>تصميم احترافي يعكس فخامة حبوب البن وتفاصيل المعالجة والإيحاءات.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>ربط بوابات الدفع الإلكتروني المحلية في مصر ونظام الشحن السريع.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>صفحة مخصصة لطلبات التوريد التجاري وعروض الأسعار للشركات والمقاهي.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-cyan text-xs mt-0.5"></i> <span>تهيئة برمجية متوافقة بالكامل مع متطلبات السرعة وتجربة الجوال وSEO.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEO & GEO Card -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-blueLight flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight bg-kaaf-blueLight/30 px-2.5 py-1 rounded-full">COMPONENT 02</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-blueLight/20 text-kaaf-blueLight flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-brain-circuit text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">استراتيجية SEO & GEO (محركات البحث والذكاء الاصطناعي)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            الجمع بين تصدر نتائج البحث التقليدية (Google) والجاهزية التامة للظهور كإجابة وتوصية في محركات الذكاء الاصطناعي التوليدية (ChatGPT, Gemini, Perplexity):
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-kaaf-blueLight/20 border border-kaaf-blueLight/40 text-center text-xs font-ibm font-bold text-kaaf-cyanLight">
+                            Traditional SEO + Generative Engine Optimization (GEO)
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-blueLight text-xs mt-0.5"></i> <span>استهداف الكلمات ذات النية الشرائية والتجارية (بن مختص، توريد قهوة للمقاهي في مصر، شراء بن جملة).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-blueLight text-xs mt-0.5"></i> <span>بناء الكيان الرقمي (Brand Entity) لـ نتقهوي لدى خوارزميات الذكاء الاصطناعي.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-blueLight text-xs mt-0.5"></i> <span>هيكلة البيانات والمحتوى المرجعي (Schema & Structured Content) لتسهيل الاستشهاد.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-blueLight text-xs mt-0.5"></i> <span>تحسين الظهور المحلي (Local SEO) لجذب الشركات والعملاء القريبين جغرافياً.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 05 — MEDIA BUYING & SOCIAL MEDIA MANAGEMENT                               -->
+        <!-- ========================================================================= -->
+        <section id="media-growth" class="space-y-8">
+            <div class="text-center max-w-3xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-green/20 text-kaaf-greenLight text-xs font-bold border border-kaaf-green/40 font-ibm">تسريع الوصول وبناء الرغبة والتحويل</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">
+                    Media Buying وإدارة السوشيال ميديا الإبداعية
+                </h2>
+                <p class="text-xs sm:text-sm text-kaaf-greenLight font-ibm">
+                    المدة: 3 أشهر متواصلة • إدارة بيانات إعلانية ذكية وبنية محتوى جذابة
+                </p>
+            </div>
+
+            <!-- 2 Columns Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Media Buying -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-gold flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-goldLight bg-kaaf-gold/20 px-2.5 py-1 rounded-full">PAID ADS</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-gold/20 text-kaaf-gold flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-bullhorn text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">إدارة الحملات الإعلانية الممولة (Media Buying)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            إدارة بيانات إعلانية موجهة لا تعتمد على العشوائية، بل ترتكز على نظام مستمر لتحقيق أعلى عائد على الإنفاق الإعلاني:
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-kaaf-gold/15 border border-kaaf-gold/40 text-center text-xs font-ibm font-bold text-kaaf-goldLight">
+                            Testing → Data → Optimization → Scaling
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>إدارة حملات متعددة المنصات (Meta: Facebook & Instagram, TikTok, Google Search).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>بناء قمع التحويل: Cold Audience → Interest → Website Visit → Purchase.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>إعادة استهداف ذكية (Retargeting) لزوار الموقع وسلات الشراء المتروكة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-gold text-xs mt-0.5"></i> <span>حملات B2B متخصصة لجمع بيانات أصحاب المقاهي ومديري المشتريات (Lead Generation).</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social Media Architecture -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-kaaf-green flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-kaaf-greenLight bg-kaaf-green/30 px-2.5 py-1 rounded-full">CONTENT ARCHITECTURE</span>
+                            <div class="w-10 h-10 rounded-xl bg-kaaf-green/20 text-kaaf-greenLight flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-photo-film text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">إدارة السوشيال ميديا وهندسة المحتوى</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            بناء هوية محتوى جذابة وراقية تجعل من «نتقهوي» المرجع الأول لثقافة القهوة في مصر:
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-kaaf-green/20 border border-kaaf-green/40 text-center text-xs font-ibm font-bold text-kaaf-greenLight">
+                            Bean → Story → Aroma → Passion → Order
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>محتوى تعليمي تفاعلي (طرق الاستخلاص، درجات الطحن، الفرق بين الإيحاءات).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>فيديوهات قصيرة جذابة (Reels & TikToks) بجماليات بصرية وسينمائية عالية.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>بناء مجتمع شغوف بالبراند والتفاعل اليومي مع استفسارات العملاء.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-kaaf-greenLight text-xs mt-0.5"></i> <span>إبراز شهادات الجودة ومصادر الاستيراد المباشر من مزارع البن العالمية.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 06 — OUTDOOR SALES & UGC/INFLUENCERS                                      -->
+        <!-- ========================================================================= -->
+        <section id="outdoor-sales" class="space-y-8">
+            <div class="text-center max-w-3xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-purple-900/30 text-purple-300 text-xs font-bold border border-purple-700/40 font-ibm">المبيعات الميدانية والتأثير المجتمعي</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">
+                    فريق المبيعات الميداني (Outdoor Sales) وصناع المحتوى
+                </h2>
+                <p class="text-xs sm:text-sm text-kaaf-cyanLight font-ibm">
+                    النزول الميداني لعقد صفقات التوريد وإثراء الثقة الاجتماعية بالبراند
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Outdoor Sales Team -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-purple-400 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-purple-300 bg-purple-950 px-2.5 py-1 rounded-full">B2B FIELD SALES</span>
+                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 text-purple-300 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-handshake text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">فريق المبيعات الميداني B2B (Outdoor Sales)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            فريق مبيعات ميداني مخصص ومدرّب لتمثيل براند «نتقهوي» أمام كبرى المقاهي والمطاعم والشركات في مصر:
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-purple-900/20 border border-purple-700/40 text-center text-xs font-ibm font-bold text-purple-300">
+                            زيارات ميدانية • عينات تذوق حية • مفاوضات تجارية • إبرام عقود التوريد
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-300 text-xs mt-0.5"></i> <span>مسح ميداني وحصر المقاهي المستهدفة في القاهرة الكبرى والمدن الحيوية.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-300 text-xs mt-0.5"></i> <span>تنفيذ زيارات تذوق احترافية لصناع القرار ومسؤولي المشتريات والـ Baristas.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-300 text-xs mt-0.5"></i> <span>تسجيل ومتابعة كافة مسارات الفرص داخل نظام إدارة علاقات العملاء (CRM).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-300 text-xs mt-0.5"></i> <span>متابعة إتمام التعاقد وجدولة التوريد الدوري لضمان دخل شهري متكرر للبراند.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- UGC & Influencers -->
+                <div class="executive-card p-6 sm:p-7 rounded-2xl space-y-5 border-t-4 border-emerald-400 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold text-emerald-300 bg-emerald-950 px-2.5 py-1 rounded-full">SOCIAL PROOF</span>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-950/40 text-emerald-300 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-users-viewfinder text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black text-white font-ibm">صناع المحتوى والمؤثرون (UGC & Influencers)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            استراتيجية استقطاب صناع المحتوى لتقديم تجارب عفوية تبرز جودة ومذاق بن «نتقهوي» (حسب الاتفاق والتنسيق):
+                        </p>
+
+                        <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-600/40 text-center text-xs font-ibm font-bold text-emerald-300">
+                            تجارب حقيقية • مراجعات صانعي القهوة • تفاعل عضوي موثوق
+                        </div>
+
+                        <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-300 text-xs mt-0.5"></i> <span>اختيار صناع محتوى متخصصين في أسلوب الحياة وتجارب القهوة والمذاق الراقي.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-300 text-xs mt-0.5"></i> <span>إنتاج محتوى تجربة المستخدم (UGC) لاستخدامه في الإعلانات وإثبات الجودة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-300 text-xs mt-0.5"></i> <span>إرسال بوكسات التذوق لكبار الـ Baristas والإنفلونسرز المتخصصين لتوثيق التجربة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-300 text-xs mt-0.5"></i> <span>تنسيق مواعيد النشر بما يتزامن مع إطلاق الحملات الممولة لتعظيم الأثر.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 07 — 3-MONTH ROADMAP                                                      -->
+        <!-- ========================================================================= -->
+        <section id="roadmap" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-gold text-xs font-bold border border-kaaf-gold/40 font-ibm">الخطة الزمنية</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">خارطة طريق الـ 3 أشهر (3-Month Roadmap)</h2>
+                <p class="text-xs sm:text-sm text-gray-400">توزيع متوازن للأعمال يضمن الانطلاق المنظم، تسريع النمو، وتحقيق أعلى كفاءة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Month 01 -->
+                <div class="executive-card p-6 rounded-2xl space-y-5 border-t-4 border-kaaf-blueLight">
+                    <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-kaaf-blue/30 text-kaaf-cyan text-xs flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-rocket"></i>
+                            </span>
+                            <span class="text-xs font-bold text-white font-ibm">MONTH 01</span>
+                        </div>
+                        <span class="text-xs text-kaaf-cyanLight font-ibm">التأسيس والانطلاق</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-gray-300">
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-cyan text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تصميم وبناء وبرمجة الموقع الإلكتروني والمتجر.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-cyan text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تجهيز بنية SEO التقنية واستعلامات GEO في الذكاء الاصطناعي.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-cyan text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">إطلاق الهوية البصرية وخطة المحتوى للسوشيال ميديا.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-cyan text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">إعداد واختبار الحملات الإعلانية الممولة الأولية (Testing Phase).</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-cyan text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تدريب وتجهيز فريق المبيعات الميداني (Outdoor Sales).</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-cyan text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">بدء الزيارات الاستكشافية للمقاهي والشركات في القاهرة الكبرى.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 02 -->
+                <div class="executive-card p-6 rounded-2xl space-y-5 border-t-4 border-kaaf-cyan">
+                    <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-cyan-900/30 text-cyan-300 text-xs flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gears"></i>
+                            </span>
+                            <span class="text-xs font-bold text-white font-ibm">MONTH 02</span>
+                        </div>
+                        <span class="text-xs text-cyan-300 font-ibm">النمو والتنفيذ الموسع</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-gray-300">
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-cyan-300 text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تكثيف حملات الـ Media Buying والتركيز على الحملات الرابحة.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-cyan-300 text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تفعيل مسار إعادة الاستهداف (Retargeting) لمشتري المتجر.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-cyan-300 text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">إبرام أولى عقود التوريد التجاري مع المقاهي عبر الـ Outdoor Sales.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-cyan-300 text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تعزيز الروابط والمصادر المرجعية لرفع تصنيف SEO وGEO.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-cyan-300 text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تنسيق ونشر تجارب صناع المحتوى المتخصصين (UGC).</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-cyan-300 text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تحليل المؤشرات النصفية ومواءمة أسعار وأحجام العبوات.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 03 -->
+                <div class="executive-card p-6 rounded-2xl space-y-5 border-t-4 border-kaaf-green">
+                    <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-kaaf-green/30 text-kaaf-greenLight text-xs flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </span>
+                            <span class="text-xs font-bold text-white font-ibm">MONTH 03</span>
+                        </div>
+                        <span class="text-xs text-kaaf-greenLight font-ibm">التحسين والتثبيت والتقييم</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-gray-300">
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-greenLight text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">توسيع نطاق التغطية الجغرافية لزيارات المبيعات الميدانية.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-greenLight text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تثبيت تصدر «نتقهوي» في الكلمات الرئيسية واستعلامات الذكاء الاصطناعي.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-greenLight text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تحقيق استقرار معدلات إعادة الشراء للعملاء الأفراد (Retention).</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-greenLight text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">توسيع عقود التوريد المستمرة وتجديد الشحنات الدورية.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-greenLight text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">تقديم التقرير الختامي الشامل للمرحلة الأولى.</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-kaaf-greenLight text-[10px] mt-1 shrink-0"></i>
+                            <span class="leading-relaxed">وضع خطة التوسع لباقي المحافظات وتوسيع تشكيلة المنتجات.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 08 — FINAL INVESTMENT & PRICING                                           -->
+        <!-- ========================================================================= -->
+        <section id="investment" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-gold text-xs font-bold border border-kaaf-gold/40 font-ibm">الاستثمار المالي المعتمد</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">تفاصيل الاستثمار (Final Investment)</h2>
+                <p class="text-xs sm:text-sm text-gray-400">استثمار شامل ومحدد يغطي كافة المسارات التسويقية والبيعية لبراند «نتقهوي» لمدة 3 أشهر</p>
+            </div>
+
+            <!-- Grand Total Highlight Card -->
+            <div class="max-w-4xl mx-auto rounded-3xl glass-panel border-2 border-kaaf-gold/60 p-8 sm:p-12 relative overflow-hidden shadow-gold-glow">
+                <div class="kaaf-accent-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="text-center space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-300 font-ibm">
+                        <i class="fa-solid fa-calendar-check text-kaaf-cyan"></i>
+                        <span>المدة الإجمالية: 3 أشهر استراتيجية متواصلة</span>
+                    </div>
+
+                    <div class="space-y-1">
+                        <h3 class="text-2xl sm:text-3xl font-black text-white font-ibm">NETGAHWA GROWTH & EXPANSION PACKAGE</h3>
+                        <p class="text-xs text-gray-400 font-ibm">باقة التوسع والنمو المتكاملة لدخول السوق المصري</p>
+                    </div>
+
+                    <!-- Prominent Total Price Display -->
+                    <div class="py-4 space-y-2">
+                        <span class="text-xs text-gray-400 block font-medium">إجمالي الاستثمار للخدمات المحددة</span>
+                        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-kaaf-goldLight to-kaaf-gold font-ibm tracking-tight">
+                            162,000
+                        </div>
+                        <span class="text-sm sm:text-base font-bold text-kaaf-goldLight font-ibm">جنيه مصري (EGP)</span>
+                        <p class="text-[11px] text-gray-400 pt-1">
+                            * الإجمالي المحدد للخدمات ذات الأسعار المعروفة (باستثناء ميزانية الإنفاق الإعلاني والمؤثرين)
+                        </p>
+                    </div>
+
+                    <!-- Line Item Breakdown Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 border-t border-white/10 text-right">
+                        <!-- Website -->
+                        <div class="p-4 rounded-2xl bg-black/40 border border-kaaf-cyan/30 space-y-2">
+                            <span class="text-[10px] font-mono font-bold text-kaaf-cyanLight">الخدمة الأولى</span>
+                            <h4 class="text-xs font-bold text-white font-ibm">بناء وتطوير الموقع (Website Building)</h4>
+                            <div class="text-lg font-black text-white font-ibm">
+                                15,000 <span class="text-xs text-kaaf-cyanLight">EGP</span>
+                            </div>
+                            <span class="text-[10px] text-gray-400 block leading-relaxed">متجر إلكتروني متكامل جاهز للبيع وقسم B2B</span>
+                        </div>
+
+                        <!-- SEO & GEO -->
+                        <div class="p-4 rounded-2xl bg-black/40 border border-kaaf-blueLight/30 space-y-2">
+                            <span class="text-[10px] font-mono font-bold text-kaaf-blueLight">الخدمة الثانية</span>
+                            <h4 class="text-xs font-bold text-white font-ibm">محركات البحث والذكاء (SEO & GEO)</h4>
+                            <div class="text-lg font-black text-white font-ibm">
+                                37,000 <span class="text-xs text-kaaf-blueLight">EGP</span>
+                            </div>
+                            <span class="text-[10px] text-gray-400 block leading-relaxed">لمدة 3 أشهر شاملة تصدر جوجل والذكاء الاصطناعي</span>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="p-4 rounded-2xl bg-black/40 border border-kaaf-green/30 space-y-2">
+                            <span class="text-[10px] font-mono font-bold text-kaaf-greenLight">الخدمة الثالثة</span>
+                            <h4 class="text-xs font-bold text-white font-ibm">إدارة السوشيال ميديا (Social Media)</h4>
+                            <div class="text-lg font-black text-white font-ibm">
+                                20,000 <span class="text-xs text-kaaf-greenLight">EGP</span>
+                            </div>
+                            <span class="text-[10px] text-gray-400 block leading-relaxed">لمدة 3 أشهر شاملة صناعة وهندسة المحتوى</span>
+                        </div>
+
+                        <!-- Media Buying -->
+                        <div class="p-4 rounded-2xl bg-black/40 border border-kaaf-gold/30 space-y-2">
+                            <span class="text-[10px] font-mono font-bold text-kaaf-goldLight">الخدمة الرابعة</span>
+                            <h4 class="text-xs font-bold text-white font-ibm">الحملات الممولة (Media Buying)</h4>
+                            <div class="text-lg font-black text-white font-ibm">
+                                40,000 <span class="text-xs text-kaaf-gold">EGP</span>
+                            </div>
+                            <span class="text-[10px] text-gray-400 block leading-relaxed">لمدة 3 أشهر لإدارة وتحسين وتوسيع الحملات</span>
+                        </div>
+
+                        <!-- Outdoor Sales -->
+                        <div class="p-4 rounded-2xl bg-black/40 border border-purple-500/30 space-y-2">
+                            <span class="text-[10px] font-mono font-bold text-purple-300">الخدمة الخامسة</span>
+                            <h4 class="text-xs font-bold text-white font-ibm">المبيعات الميدانية (Outdoor Sales)</h4>
+                            <div class="text-lg font-black text-white font-ibm">
+                                50,000 <span class="text-xs text-purple-300">EGP</span>
+                            </div>
+                            <span class="text-[10px] text-gray-400 block leading-relaxed">لمدة 3 أشهر لفريق المبيعات الميداني B2B</span>
+                        </div>
+
+                        <!-- UGC & Influencers -->
+                        <div class="p-4 rounded-2xl bg-black/40 border border-emerald-500/30 space-y-2">
+                            <span class="text-[10px] font-mono font-bold text-emerald-300">الخدمة السادسة</span>
+                            <h4 class="text-xs font-bold text-white font-ibm">المؤثرون وصناع المحتوى (UGC)</h4>
+                            <div class="text-lg font-black text-emerald-300 font-ibm">
+                                حسب الاتفاق
+                            </div>
+                            <span class="text-[10px] text-gray-400 block leading-relaxed">تنسيق وإدارة الحملات وفق الميزانية المعتمدة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 09 — STRATEGIC VISION & VALUE                                             -->
+        <!-- ========================================================================= -->
+        <section id="market-vision" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-blue/20 text-kaaf-cyanLight text-xs font-bold border border-kaaf-blue/40 font-ibm">الرؤية الاستراتيجية</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm">القيمة التي نبنيها لبراند «نتقهوي»</h2>
+                <p class="text-xs sm:text-sm text-gray-400">رؤية تسويقية وتجارية متكاملة تضع نمو المبيعات في صدارة الأولويات</p>
+            </div>
+
+            <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-kaaf-blue/40 space-y-6">
+                <div class="space-y-4 text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl mx-auto text-center font-medium">
+                    <p class="text-base text-white font-bold font-ibm">
+                        لا نتعامل مع التسويق كأدوات مجزأة، بل كمنظومة أعمال متكاملة تدعم النمو المستدام لبراند «نتقهوي».
+                    </p>
+                    <p class="text-gray-300">
+                        تجمع هذه الاستراتيجية بين تأسيس المنصة الرقمية الموثوقة، وتصدر محركات البحث، وصناعة المحتوى التفاعلي، والحملات الممولة عالية التحويل، مع النزول الميداني المباشر لعقد صفقات التوريد؛ لنبني لـ <strong>نتقهوي</strong> حضورًا تجاريًا متفوقًا ومستدامًا في السوق المصري.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-3 text-center">
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 space-y-1">
+                        <i class="fa-solid fa-chess-knight text-kaaf-cyan text-lg mb-1"></i>
+                        <h3 class="text-xs font-bold text-white font-ibm">Strategic Integration</h3>
+                        <p class="text-[11px] text-gray-400">تكامل تام بين المتجر الرقمي والتسويق والمبيعات الميدانية.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 space-y-1">
+                        <i class="fa-solid fa-microchip-ai text-kaaf-greenLight text-lg mb-1"></i>
+                        <h3 class="text-xs font-bold text-white font-ibm">AI Search Leadership</h3>
+                        <p class="text-[11px] text-gray-400">ريادة استباقية في تهيئة البراند لمحركات الذكاء الاصطناعي وGEO.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 space-y-1">
+                        <i class="fa-solid fa-handshake text-kaaf-gold text-lg mb-1"></i>
+                        <h3 class="text-xs font-bold text-white font-ibm">B2B Field Power</h3>
+                        <p class="text-[11px] text-gray-400">فريق ميداني متخصص لفتح قنوات التوريد للمقاهي والشركات.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 space-y-1">
+                        <i class="fa-solid fa-chart-line text-purple-300 text-lg mb-1"></i>
+                        <h3 class="text-xs font-bold text-white font-ibm">Data-Driven Execution</h3>
+                        <p class="text-[11px] text-gray-400">قرارات وتطوير مستمر مبني على البيانات الفعلية والشفافية التامة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 10 — CLOSING & ACTION                                                     -->
+        <!-- ========================================================================= -->
+        <section id="closing" class="relative rounded-3xl overflow-hidden p-8 sm:p-14 glass-panel border border-kaaf-cyan/50 text-center space-y-8 shadow-2xl">
+            <div class="kaaf-accent-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="max-w-2xl mx-auto space-y-5">
+                <div class="inline-flex items-center gap-2 text-xs font-bold text-kaaf-goldLight font-ibm">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <span>نتقهوي • خطة التوسع الاستراتيجي لدخول السوق المصري</span>
+                </div>
+
+                <!-- Clean Heading -->
+                <h2 class="text-2xl sm:text-4xl font-black text-white font-ibm leading-relaxed sm:leading-loose">
+                    نحو حضور رائد ومبيعات مستدامة لبراند «نتقهوي»
+                </h2>
+
+                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-normal max-w-xl mx-auto">
+                    تم إعداد هذا العرض الاستراتيجي ليكون خارطة طريق تنفيذية متكاملة تضمن ترسيخ مكانة <strong>«نتقهوي»</strong>، وبناء علامة رائدة وموثوقة لدى المستهلكين وقطاع الأعمال في السوق المصري.
+                </p>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 text-xs text-gray-400 flex flex-wrap items-center justify-between gap-2">
+                <span>نتقهوي (Netgahwa) • استراتيجية التوسع ودخول السوق المصري</span>
+                <span class="font-mono text-kaaf-cyanLight">3-Month Growth Framework</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Brand Icon (Left) -->
+    <aside class="fixed bottom-6 left-6 z-40">
+        <a href="#cover" title="نتقهوي | Netgahwa" class="block w-13 h-13 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-kaaf-cyan/80 p-0.5 bg-black/95 animate-float-kaaf shadow-2xl hover:scale-110 active:scale-95 transition flex items-center justify-center">
+            <i class="fa-solid fa-mug-hot text-kaaf-cyan text-xl sm:text-2xl"></i>
+        </a>
+    </aside>
+
+    <script>
+        // Interactive Background Canvas Particles (Identical to Master Template)
+        (function() {
+            const canvas = document.getElementById('executive-bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const particleCount = 38;
+            const colors = ['#0A4C86', '#06B6D4', '#00B377', '#D4AF37'];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.45;
+                    this.vy = (Math.random() - 0.5) * 0.45;
+                    this.radius = Math.random() * 2 + 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.baseAlpha = Math.random() * 0.35 + 0.15;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.baseAlpha;
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function connect() {
+                const maxDist = 135;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < maxDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#06B6D4';
+                            ctx.globalAlpha = (1 - (dist / maxDist)) * 0.14;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        // DOM Interactions, Scrollspy & Modal Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Reading Scroll Progress
+            const progressBar = document.getElementById('progressBar');
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalHeight > 0 && progressBar) {
+                    const progress = (window.scrollY / totalHeight) * 100;
+                    progressBar.style.width = `${progress}%`;
+                }
+            });
+
+            // Mobile Menu Handlers
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+            const mobileIcon = document.getElementById('mobileIcon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav');
+
+            if (mobileMenuBtn && mobileDrawer) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isHidden = mobileDrawer.classList.contains('hidden');
+                    mobileDrawer.classList.toggle('hidden');
+                    mobileIcon.className = isHidden ? 'fa-solid fa-xmark text-base text-kaaf-cyan' : 'fa-solid fa-bars text-base';
+                });
+
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileDrawer.classList.add('hidden');
+                        mobileIcon.className = 'fa-solid fa-bars text-base';
+                    });
+                });
+            }
+
+            // Scrollspy Active Navigation
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${currentId}`) {
+                                link.classList.add('nav-item-active');
+                            } else {
+                                link.classList.remove('nav-item-active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-20% 0px -65% 0px',
+                threshold: 0
+            });
+
+            sections.forEach(s => observer.observe(s));
+        });
+    </script>
+</body>
+</html>
